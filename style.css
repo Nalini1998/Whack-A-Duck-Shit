@@ -1,0 +1,169 @@
+html {
+    font-size: 35px;
+    background: #80CBC4;
+    font-family: Inconsolata, sans-serif;  
+}
+
+body {
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="100" viewBox="0 0 50 80"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.6"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+h1 {
+    text-align: center;
+    font-size: 55px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.score {
+    background: #263238;
+    padding: 4PX 15px;
+    line-height: 1;
+    border-radius: 30px;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.score:hover {
+   display: none;
+}
+
+.game {
+    width: 800px;
+    height: 500px;
+    display:flex;
+    flex-wrap:wrap;
+    margin: 0 auto;
+    box-sizing: border-size;
+    
+    
+}
+
+.hole{
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after{
+    display:block;
+    background: url(https://images.emojiterra.com/google/noto-emoji/unicode-15/animated/1f4a9.gif) bottom center no-repeat;
+    background-size:contain;
+    content: '';
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    bottom: -25px;
+}
+
+.mole {
+    background: url('https://media4.giphy.com/media/hu7xNE3CrCjDtTWbQN/giphy.gif') bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s;
+}
+
+.hole.up .mole{
+    top:0;
+}
+
+button{
+    width: 100px;
+    font-size: 25px;
+    color: #fff;
+    background-color: #78909C;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 90px;
+    padding: 10px 10px;
+    border: none;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: #263238;
+    padding: 12px 12px;
+}
+
+@media (min-width: 667px) and (max-width: 1024px){
+    
+    h1 {
+        display: none;
+    }
+    .score {
+    background:blue;
+    padding: 0 12px;
+    line-height: 1;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+    .hole.up .mole{
+        top:17px;
+    }
+}
+
+@media (max-width: 667px){
+
+    .game {
+        width: 667px;
+        height: 300px;
+        display:flex;
+        flex-wrap:wrap;
+        margin: 0 auto;
+    }
+
+    .score{
+        width:35px;
+        font-size: 15px;
+        height: 40px;
+        color: #fff;
+        background-color: blue;
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding: 5px;
+        }
+
+        button{
+            margin: 10px 10px 10px 10px;
+            height: 40px;
+            width: 75px;
+            font-size: 15px;
+        }
+
+    .hole:after{
+        display:block;
+        background: url(dirt.png) bottom center no-repeat;
+        background-size:contain;
+        content: '';
+        max-width: 70%;
+        height: 60px;
+        position: absolute;
+        z-index: 2;
+        bottom: -30px;
+    }
+
+    .mole {
+        background: url('mole.png') bottom center no-repeat;
+        background-size: 60%;
+        position: absolute;
+        top: 100%;
+        max-width: 70%;
+        height: 70%;
+        transition: all 0.4s;
+    }
+
+    .hole.up .mole{
+        top:50px;
+    }
+}
